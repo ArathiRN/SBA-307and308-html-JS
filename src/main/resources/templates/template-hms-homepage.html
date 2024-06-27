@@ -2,23 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hospital Management System</title>
     <link rel="stylesheet" href="../static/css/style-hms-homepage.css">
 </head>
 <body>
-<!--header>
-    <img src="../static/images/medical-logo.jpg" alt="My Logo" class="logo">
-    <h1>Health First Clinic</h1>
-    <nav>
-        <ul>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="../templates/template-hms-location.html">Location</a></li>
-            <li><a href="../templates/template-hms-homepage.html#contact">Reach out</a></li>
-            <li><a href="../templates/template-hms-registration.html">Patient Registration</a></li>
-        </ul>
-    </nav>
-</header-->
 <header>
 <nav class="navbar">
     <div class="navbar-left">
@@ -28,14 +16,15 @@
         <h1>Health First Clinic</h1>
     </div>
     <div class="navbar-right">
-    <nav>
-        <ul class="nav-links">
-            <li><a href="#about">About Us</a></li>
-            <li><a href="../templates/template-hms-location.html#services">Services</a></li>
-            <li><a href="../templates/template-hms-location.html">Location</a></li>
-            <li><a href="../templates/template-hms-homepage.html#contact">Reach out</a></li>
-            <li><a href="../templates/template-hms-registration.html">Registration</a></li>
-        </ul>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="../templates/template-hms-homepage.html#about">About Us</a></li>
+                <li><a href="../templates/template-hms-location.html#services">Services</a></li>
+                <li><a href="../templates/template-hms-location.html#location">Location</a></li>
+                <li><a href="../templates/template-hms-homepage.html#contact">Reach out</a></li>
+                <li><a href="../templates/template-hms-registration.html">Registration</a></li>
+            </ul>
+        </nav>
     </div>
 </nav>
 </header>
@@ -46,7 +35,10 @@
         <h2>About Us</h2>
     </div>
     <div>
-        <p>We are commited towards community health, well-being and disease prevention through our expertise Doctors and Advanced Medical Treatments</p>
+        <p style="color: white;">We are commited towards community Health,Well-being and
+            Disease prevention through our expertise Doctors
+            and Advanced medical treatments.
+            Our Services  are available to the Patients 24/7.</p>
     </div>
 </section>
 
@@ -64,7 +56,19 @@
         <button type="submit">Submit</button>
     </form>
 </section>
-<script src="../static/js/script-hms-homepage.js"></script>
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+        const contName = document.getElementById('name').value;
+        const contEmail = document.getElementById('email').value;
+        if (!contName || !contEmail) {
+        alert('Submit is not complete, until you fill all the fields.');
+        return;
+        }
+        alert('We will reach you soon to address your concerns');
+    });
+</script>
+<!--script src="../static/js/script-hms-homepage.js"></script-->
 </body>
 </html>
 

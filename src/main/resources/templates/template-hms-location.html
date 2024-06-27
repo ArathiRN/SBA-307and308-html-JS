@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hospital Management System</title>
     <link rel="stylesheet" href="../static/css/style-hms-homepage.css">
 </head>
@@ -20,7 +21,7 @@
                 <ul class="nav-links">
                     <li><a href="../templates/template-hms-homepage.html#about">About Us</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="../templates/template-hms-location.html">Location</a></li>
+                    <li><a href="../templates/template-hms-location.html#location">Location</a></li>
                     <li><a href="../templates/template-hms-homepage.html#contact">Reach out</a></li>
                     <li><a href="../templates/template-hms-registration.html">Registration</a></li>
                 </ul>
@@ -29,16 +30,37 @@
 </header>
 
 <section id="services">
-    <h2> Services</h2>
-    <nav>
-        <ul>
-            <li>Primary care</li>
-            <li>Cardiology</li>
-            <li>Pediatric</li>
-            <li>Orthopedic</li>
-            <li>Gynecology</li>
-        </ul>
-    </nav>
+    <h2>Services</h2>
+    <table>
+        <!--thead>
+        <tr>
+            <th>Service</th>
+        </tr>
+        </thead-->
+        <tbody>
+        <tr>
+            <td>Primary Care</td>
+        </tr>
+        <tr>
+            <td>Cardiology</td>
+        </tr>
+        <tr>
+            <td>Pediatric</td>
+        </tr>
+        <tr>
+            <td>Orthopedic</td>
+        </tr>
+        <tr>
+            <td>Gynecology</td>
+        </tr>
+        <tr>
+            <td>Vision Care</td>
+        </tr>
+        <tr>
+            <td>Emergency Care</td>
+        </tr>
+        </tbody>
+    </table>
 </section>
 
 <section id="location">
@@ -51,25 +73,11 @@
         <p>Massachusetts</p>
         <p><bold>For Appointment Schedule, reach us at</p>
         <p>Phone: +1234567890</p>
-        <a href="mailto:arathirn@yahoo.com">E-mail:appointments@hfc.com</a>
+        <a href="mailto:arathirn@yahoo.com">E-mail: appointments@hfc.com</a>
     </div>
 </section>
 
 <script src="../static/js/script-hms-homepage.js"></script>
-<!--section id="services">
-    <h2> Services</h2>
-    <nav>
-        <ul>
-            <li>Primary care</li>
-            <li>Emergency care</li>
-            <li>Cardiology</li>
-            <li>Pediatric</li>
-            <li>Orthopedic</li>
-            <li>Gynecology</li>
-
-        </ul>
-    </nav>
-</section-->
 
 <!--footer>
     <p>&copy; 2024 Health First Clinic. All rights reserved.</p>
@@ -81,6 +89,6 @@
         window.location.href = 'details.html';
     }
 </script>
-<!--script src="../static/js/script-hms-homepage.js"></script-->
+
 </body>
 </html>

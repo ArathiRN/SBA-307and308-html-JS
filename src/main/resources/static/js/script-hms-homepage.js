@@ -1,40 +1,38 @@
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    alert('Thank you for your message!');
-    // Here you can add code to handle form submission,
-    // such as sending the data to a server.
-});
-
-function navigateToSection(page, sectionId) {
-    window.location.href = `${page}#${sectionId}`;
-}
 
 document.getElementById('registrationForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    const firstName = document.getElementById('firstName').value;
-    const lastName = document.getElementById('lastName').value;
-    const email = document.getElementById('email').value;
-    const phone = document.getElementById('phone').value;
-    const dob = document.getElementById('dob').value;
-    const gender = document.getElementById('gender').value;
-    const address = document.getElementById('address').value;
+    // Create an array of form fields with validation regex patterns
+    const formFields = [
+        { id: 'firstName', value: document.getElementById('firstName').value, name: 'First Name', regex: null },
+        { id: 'lastName', value: document.getElementById('lastName').value, name: 'Last Name', regex: null },
+        { id: 'email', value: document.getElementById('email').value, name: 'Email', regex: /^[^\s@]+@[^\s@]+\.[^\s@]+$/ },
+        { id: 'phone', value: document.getElementById('phone').value, name: 'Phone', regex: /^\d{10}$/ },
+        { id: 'dob', value: document.getElementById('dob').value, name: 'Date of Birth', regex: /^\d{4}-\d{2}-\d{2}$/ }, // Assuming YYYY-MM-DD format
+        { id: 'gender', value: document.getElementById('gender').value, name: 'Gender', regex: null },
+        { id: 'address', value: document.getElementById('address').value, name: 'Address', regex: null }
+    ];
 
-    if (!firstName || !lastName || !email || !phone || !dob || !gender || !address) {
-        alert('Please fill out all fields.');
-        return;
-    }
-
-    if (!/^\d{10}$/.test(phone)) {
-        alert('Please enter a valid 10-digit phone number.');
-        return;
+    // Check if any fields are empty and validate them using regex if provided
+    for (let field of formFields) {
+        if (!field.value) {
+            alert(`Fill out the ${field.name} field.`);
+            return;
+        }
+        if (field.regex && !field.regex.test(field.value)) {
+            alert(`Enter a valid ${field.name}.`);
+            return;
+        }
     }
 
     alert('Registration successful!');
 });
-document.querySelector('h1').addEventListener('click', function() {
+
+/*
+document.querySelector('h1').addEventListener('click', function () {
     alert('You clicked the heading!');
-});
+});*/
+
 /*
 function navigateToSection(page, sectionId) {
     window.location.href = `${page}#${sectionId}`;
