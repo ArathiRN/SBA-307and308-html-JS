@@ -22,7 +22,8 @@
                 <li><a href="../templates/template-hms-location.html#services">Services</a></li>
                 <li><a href="../templates/template-hms-location.html#location">Location</a></li>
                 <li><a href="../templates/template-hms-homepage.html#contact">Reach out</a></li>
-                <li><a href="../templates/template-hms-registration.html">Registration</a></li>
+                <li><a href="../templates/template-hms-registration.html#registrationForm">Registration</a></li>
+                <li><a href="../templates/template-hms-appointments.html#appointmentForm"> Schedule an Appointment</a></li>
             </ul>
         </nav>
     </div>
@@ -59,11 +60,11 @@
 <script>
     document.getElementById('contactForm').addEventListener('submit', function (event) {
         event.preventDefault();
-        const contName = document.getElementById('name').value;
-        const contEmail = document.getElementById('email').value;
-        if (!contName || !contEmail) {
-        alert('Submit is not complete, until you fill all the fields.');
-        return;
+            const contName = document.getElementById('name').value;
+            const contEmail = document.getElementById('email').value;
+            if (!contName || !contEmail) {
+            alert('Submit is not complete, until you fill all the fields.');
+            return;
         }
         alert('We will reach you soon to address your concerns');
     });

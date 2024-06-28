@@ -5,6 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hospital Management System</title>
     <link rel="stylesheet" href="../static/css/style-hms-homepage.css">
+        <style>
+            /* Optional CSS for styling */
+            /*body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+            }*/
+            #doctorList, #appointmentList {
+                list-style-type: none;
+                padding: 10px;
+                align-items: center;
+            }
+            #doctorList li, #appointmentList li {
+                margin: 10px 0;
+                padding: 10px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                text-align-all: center;
+            }
+        </style>
 </head>
 <body>
 <header>
@@ -22,13 +41,39 @@
                     <li><a href="../templates/template-hms-location.html#services">Services</a></li>
                     <li><a href="../templates/template-hms-location.html#location">Location</a></li>
                     <li><a href="../templates/template-hms-homepage.html#contact">Reach out</a></li>
-                    <li><a href="../templates/template-hms-registration.html">Registration</a></li>
+                    <li><a href="../templates/template-hms-registration.html#registrationForm">Registration</a></li>
+                    <li><a href="../templates/template-hms-appointments.html#appointmentForm"> Schedule an Appointment</a></li>
                 </ul>
             </nav>
         </div>
     </nav>
 </header>
+<section>
+    <h2>Doctors List</h2>
+    <table>
+        <tr style="color:white" id="doctorList"></tr>
+    </table>
+    <!--h2>Doctors List</h2>
+    <ul style="color:white" id="doctorList"></ul-->
+</section>
 
-
+<section>
+    <h2>Schedule an Appointment</h2>
+    <form id="appointmentForm">
+        <label for="doctor">Doctor:</label>
+        <select id="doctor"></select><br><br>
+        <label for="patientName">Patient Name:</label>
+        <input type="text" id="patientName" required><br><br>
+        <label for="appointmentDate">Appointment Date:</label>
+        <input type="date" id="appointmentDate" required><br><br>
+        <button type="submit"> Schedule </button>
+    </form>
+</section>
+<section>
+    <h2>Appointments</h2>
+    <ul style="color:white" id="appointmentList"></ul>
+</section>
+<script src="../static/js/script-hms-homepage.js"></script>
+<script src="../static/js/script-hms-appointments.js"></script>
 </body>
 </html>
