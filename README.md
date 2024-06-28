@@ -1,4 +1,4 @@
-Project Name: Front application for the Hospital Manage System. 
+Project Name: Front End application for the Hospital Manage System. 
 This is to develop the Front End application using HTML,CSS and JavaScript programming for the Capstone project Hospital Management System. This web application is developed to carry out the hospital visits and patient services  to make it easy.
 Project developed using IntelliJ.
 Installasions used are IntelliJ,Maven, Spring Boot. 
